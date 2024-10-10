@@ -3,7 +3,7 @@ import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
-const Navbar = ({ onHomePress, onProfilePress, onSearchPress }) => {
+const Navbar = ({ onHomePress, onSearchPress, onMessagePress, onProfilePress }) => {
   return (
     <View style={styles.navBar}>
       {/* Home Button */}
@@ -17,7 +17,7 @@ const Navbar = ({ onHomePress, onProfilePress, onSearchPress }) => {
       </TouchableOpacity>
 
       {/* Message Button */}
-      <TouchableOpacity onPress={onProfilePress} style={styles.iconContainer}>
+      <TouchableOpacity onPress={onMessagePress} style={styles.iconContainer}>
         <FontAwesome name="comment" size={24} color="black" />
       </TouchableOpacity>
       

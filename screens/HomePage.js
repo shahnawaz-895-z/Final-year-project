@@ -16,15 +16,19 @@ export default function HomePage({ navigation }) {
         <Text style={styles.buttonText}>REPORT LOST ITEM</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>REPORT FOUND ITEM</Text>
+      <TouchableOpacity 
+        style={styles.button}
+        onPress={() => navigation.navigate('ReportFoundItem')}  
+      >
+      <Text style={styles.buttonText}>REPORT FOUND ITEM</Text>
       </TouchableOpacity>
 
       {/* Use the Navbar component */}
       <Navbar 
         onHomePress={() => navigation.navigate('HomePage')}
         onSearchPress={() => navigation.navigate('Search')}
-        onProfilePress={() => navigation.navigate('Profile')}
+        onMessagePress={() => navigation.navigate('Search')}
+        onProfilePress={() => navigation.navigate('ProfileUpdate')}
       />
     </View>
   );
