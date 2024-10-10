@@ -5,6 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import LoginScreen from './screens/LoginScreen';       // Import your login screen
 import SignUpScreen from './screens/SignUpScreen';     // Import your sign-up screen
 import ForgotPasswordScreen from './screens/ForgotPasswordScreen'; // Import your forgot password screen
+import HomePage from './screens/HomePage';       // Import homepage screen
 
 const Stack = createStackNavigator();
 
@@ -26,6 +27,11 @@ export default function App() {
           name="ForgotPassword"
           component={ForgotPasswordScreen}
           options={{ headerShown: false }}  // Customize as needed
+        />
+        <Stack.Screen
+          name="HomePage"               // Add HomePage screen in the navigator
+          component={HomePage}
+          options={{ headerShown: false }}
         />
       </Stack.Navigator>
     </NavigationContainer>

@@ -11,6 +11,8 @@ const LoginScreen = ({ navigation }) => {
   const handleLogin = () => {
     // Logic for login
     console.log('Logging in with:', email, password);
+    // After successful login, navigate to the HomePage
+    navigation.navigate('HomePage');
   };
 
   const validateEmail = (text) => {
